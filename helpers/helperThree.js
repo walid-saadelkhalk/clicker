@@ -3,10 +3,10 @@ var priceHelper3 = document.getElementById('priceHelper3');
 var helper3Active = false;
 
 helperButton3.addEventListener('click', function() {
-    var price = parseInt(priceHelper3.textContent);
+    var price = BigInt(priceHelper3.textContent);
     if (count >= price && !helper3Active) {
         count -= price;
-        priceHelper3.textContent = price * 2;
+        priceHelper3.textContent = (price * BigInt(2)).toString();
         helper3Active = true;
         setInterval(function() {
             updateCounter();

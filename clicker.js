@@ -1,15 +1,11 @@
- var button = document.getElementById('clickerButton');
+var button = document.getElementById('clickerButton');
 var counter = document.getElementById('clickerCounter');
 
-var count = 0;
-
-
-var helper2Active = false;
-
+var count = BigInt(0);
 
 function updateCounter() {
-    count += 1;
-    counter.textContent = count;
+    count += BigInt(1);
+    counter.textContent = count.toString();
 }
 
 button.addEventListener('click', function() {
@@ -22,5 +18,4 @@ button.addEventListener('click', function() {
         document.body.style.backgroundImage = "";
     }, 50);
 });
-
 
