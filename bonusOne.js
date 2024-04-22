@@ -15,4 +15,4 @@ bonusButton1.addEventListener('click', function() {
     }
 });
 
-export { bonusButton1, priceBonus1, bonus1Active }; 
+// export { bonusButton1, priceBonus1, bonus1Active }; 
