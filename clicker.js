@@ -19,8 +19,8 @@ button.addEventListener('click', function() {
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     setTimeout(function() {
-        document.body.style.backgroundImage = "url('assets/images/ps1_off.png')";
-    }, 10);
+        document.body.style.backgroundImage = "";
+    }, 50);
 });
 
 
