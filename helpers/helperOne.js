@@ -22,7 +22,9 @@ ameliorationButton1.addEventListener('click', function() {
     if (count >= priceImprovement && helper1Active) {
         count -= priceImprovement;
         ameliorationHelper1.textContent = price * 2;
-        count += 1;
+        setInterval(function() {
+            updateCounter();
+        }, 100);
     }
 });
 
