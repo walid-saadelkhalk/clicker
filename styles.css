@@ -21,14 +21,14 @@ body {
     font-size: 50px;
 }
 
-#bonusButton1 {
+#helperButton1 {
     position: absolute;
     left: 2%;
     top: 70%; 
     font-size: 16px; 
 }
 
-#priceBonus1 {
+#priceHelper1 {
     position: absolute;
     left: 9%;
     top: 68.5%; 
@@ -44,7 +44,7 @@ body {
     font-size: 16px; 
 }
 
-#ameliorationBonus1 {
+#ameliorationHelper1 {
     position: absolute;
     left: 24%;
     top: 68.5%; 
@@ -53,14 +53,14 @@ body {
     color: white;
 }
 
-#bonusButton2 {
+#helperButton2 {
     position: absolute;
     left: 2%;
     top: 75%; 
     font-size: 16px;
 }
 
-#priceBonus2 {
+#priceHelper2 {
     position: absolute;
     left: 9%;
     top: 73%; 
@@ -76,7 +76,7 @@ body {
     font-size: 16px; 
 }
 
-#ameliorationBonus2 {
+#ameliorationHelper2 {
     position: absolute;
     left: 24%;
     top: 73%; 
