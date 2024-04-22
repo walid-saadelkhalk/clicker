@@ -1,5 +1,7 @@
 var helperButton1 = document.getElementById('helperButton1');
 var priceHelper1 = document.getElementById('priceHelper1');
+let ameliorationButton1 = document.getElementById('ameliorationButton1');
+let ameliorationHelper1 = document.getElementById('ameliorationHelper1');
 var helper1Active = false;
 
 helperButton1.addEventListener('click', function() {
@@ -14,4 +16,15 @@ helperButton1.addEventListener('click', function() {
         helper1Active = false;
     }
 });
+
+ameliorationButton1.addEventListener('click', function() {
+    let priceImprovement = parseInt(ameliorationHelper1.textContent);
+    if (count >= priceImprovement && helper1Active) {
+        count -= priceImprovement;
+        ameliorationHelper1.textContent = price * 2;
+        count += 1;
+    }
+});
+
+
 
