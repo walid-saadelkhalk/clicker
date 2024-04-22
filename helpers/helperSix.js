@@ -1,12 +1,15 @@
 var helperButton6 = document.getElementById('helperButton6');
 var priceHelper6 = document.getElementById('priceHelper6');
 var helper6Active = false;
+var basePriceHelper6 = BigInt(priceHelper6.textContent); 
+var exponentHelper6 = 1;
 
 helperButton6.addEventListener('click', function() {
-    var price = BigInt(priceHelper6.textContent);
-    if (count >= price && !helper6Active) {
-        count -= price;
-        priceHelper6.textContent = (price * BigInt(2)).toString();
+    if (count >= basePriceHelper6 && !helper6Active) {
+        count -= basePriceHelper6;
+        basePriceHelper6 *= BigInt(Math.pow(2, exponentHelper6)); 
+        exponentHelper6++;
+        priceHelper6.textContent = basePriceHelper6.toString();
         helper6Active = true;
         setInterval(function() {
             updateCounter();

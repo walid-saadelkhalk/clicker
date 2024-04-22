@@ -1,12 +1,15 @@
 var helperButton1 = document.getElementById('helperButton1');
 var priceHelper1 = document.getElementById('priceHelper1');
 var helper1Active = false;
+var basePriceHelper1 = BigInt(priceHelper1.textContent); 
+var exponentHelper1 = 1;
 
 helperButton1.addEventListener('click', function() {
-    var price = BigInt(priceHelper1.textContent);
-    if (count >= price && !helper1Active) {
-        count -= price;
-        priceHelper1.textContent = (price * BigInt(2)).toString();
+    if (count >= basePriceHelper1 && !helper1Active) {
+        count -= basePriceHelper1;
+        basePriceHelper1 *= BigInt(Math.pow(2, exponentHelper1)); 
+        exponentHelper1++;
+        priceHelper1.textContent = basePriceHelper1.toString();
         helper1Active = true;
         setInterval(function() {
             updateCounter();
@@ -14,4 +17,6 @@ helperButton1.addEventListener('click', function() {
         helper1Active = false;
     }
 });
+
+
 
