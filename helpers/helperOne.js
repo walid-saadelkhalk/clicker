@@ -4,6 +4,8 @@ let ameliorationButton1 = document.getElementById('ameliorationButton1');
 let ameliorationHelper1 = document.getElementById('ameliorationHelper1');
 var helper1Active = false;
 
+let helper1Increase = 1n; //Initial value of the helper
+
 helperButton1.addEventListener('click', function() {
     var price = BigInt(priceHelper1.textContent);
     if (count >= price && !helper1Active) {
@@ -18,13 +20,11 @@ helperButton1.addEventListener('click', function() {
 });
 
 ameliorationButton1.addEventListener('click', function() {
-    let priceImprovement = parseInt(ameliorationHelper1.textContent);
+    let priceImprovement = BigInt(ameliorationHelper1.textContent);
     if (count >= priceImprovement && helper1Active) {
         count -= priceImprovement;
-        ameliorationHelper1.textContent = price * 2;
-        setInterval(function() {
-            updateCounter();
-        }, 100);
+        ameliorationHelper1.textContent = (priceImprovement * BigInt(2)).toString();
+        helper1Increase += 2n;
     }
 });
 
