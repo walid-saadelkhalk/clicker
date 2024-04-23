@@ -1,12 +1,25 @@
 var button = document.getElementById('clickerButton');
 var counter = document.getElementById('clickerCounter');
 
-var count = BigInt(0);
+var count = 0;
+
+
+var helper2Active = false;
+
 
 function updateCounter() {
-    count += BigInt(1);
-    counter.textContent = count.toString();
+    count += 1;
+    counter.textContent = count;
 }
+
+// let count = BigInt(0n);
+// let percentageIncrease = 5n; // 10%
+
+// function updateCounter() {
+//     let increase = count < 100n ? 1n : count * percentageIncrease / 100n;
+//     count += increase;
+//     counter.textContent = count.toString();
+// }
 
 button.addEventListener('click', function() {
     updateCounter();
@@ -18,4 +31,5 @@ button.addEventListener('click', function() {
         document.body.style.backgroundImage = "";
     }, 50);
 });
+
 
