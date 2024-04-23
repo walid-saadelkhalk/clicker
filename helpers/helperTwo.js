@@ -17,3 +17,4 @@ helperButton2.addEventListener('click', function() {
         helper2Active = false;
     }
 });
+

@@ -2,6 +2,7 @@ var button = document.getElementById('clickerButton');
 var counter = document.getElementById('clickerCounter');
 
 var count = BigInt(0);
+var transactionList = [];
 
 function updateCounter() {
     count += BigInt(1);
@@ -17,9 +18,12 @@ button.addEventListener('click', function() {
     setTimeout(function() {
         document.body.style.backgroundImage = "";
     }, 50);
+    transactionList.push({
+        clickCounter: count,
+        priceHelper1: BigInt(priceHelper1.textContent),
+        priceHelper2: BigInt(priceHelper2.textContent)
+    });
+    // console.log("Nombre total de transactions : ", transactionList.length);
 });
-
-
-
 
 
