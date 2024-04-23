@@ -17,6 +17,3 @@ helperButton1.addEventListener('click', function() {
         helper1Active = false;
     }
 });
-
-
-
