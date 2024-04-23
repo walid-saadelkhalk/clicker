@@ -16,18 +16,15 @@ class HelperOne extends Helper {
     }
     
     upgrade() {
-        // Filtrer les helpers actifs de type HelperOne
         let activeHelperOnes = helpers.filter(helper => helper instanceof HelperOne && helper.active);
         
-        // Vérifier s'il y a des helpers actifs
+
         if (activeHelperOnes.length > 0) {
-            // Calculer la nouvelle baseCapacity pour tous les helpers actifs
             let newBaseCapacity = activeHelperOnes[0].baseCapacity * BigInt(102) / BigInt(100);
             
-            // S'assurer que la capacité augmente d'au moins 1
             newBaseCapacity = newBaseCapacity >= activeHelperOnes[0].baseCapacity + 1n ? newBaseCapacity : activeHelperOnes[0].baseCapacity + 1n;
     
-            // Mettre à jour la baseCapacity et la capacité de tous les helpers actifs
+
             for (let helper of activeHelperOnes) {
                 helper.baseCapacity = newBaseCapacity;
                 helper.capacity = newBaseCapacity;
@@ -74,7 +71,7 @@ ameliorationButton1.addEventListener('click', function() {
         count -= priceImprovement;
         ameliorationHelper1.textContent = (priceImprovement * BigInt(2)).toString();
         
-        // Vérifier si l'amélioration n'a pas déjà été appliquée
+
         if (!upgradeApplied) {
             for (let i = 0; i < helpers.length; i++) {
                 if (helpers[i] instanceof HelperOne && helpers[i].active) {
@@ -82,8 +79,8 @@ ameliorationButton1.addEventListener('click', function() {
                     console.log(helpers[i].capacity)
                 }
             }
-            HelperOne.updateCapacityForAllHelpers(helpers); // Mettre à jour la capacité de tous les helpers actifs
-            upgradeApplied = false; // Marquer l'amélioration comme appliquée
+            HelperOne.updateCapacityForAllHelpers(helpers); 
+            upgradeApplied = false; 
             console.log("Amélioration appliquée à tous les helperOne actifs !");
         }
     }
