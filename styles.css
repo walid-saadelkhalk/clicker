@@ -25,13 +25,13 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 50vw;
+    width: 60vw;
     height: 50vh;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    padding: 30px;
+    padding-top: 30px;
 }
 
 .helper, .improvement {
@@ -41,6 +41,17 @@ body {
 .helpername {
     display: flex;
     align-items: center;
+}
+
+
+.price {
+    margin-top: -20px;
+    margin-left : 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    color :#baa716;
+    font-family: "Minecraft";
 }
 
 .helpername p {
@@ -61,15 +72,53 @@ body {
 
 .row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    /* background-color: aquamarine; */
+    height: 50vh;
+    width: 90vh;
     grid-gap: 10px;
 }
 
 .cell {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 60px;
+    /* background-color: burlywood; */
+    grid-template-columns: repeat(3, 1fr);
+    height: 8vh;
+    width: 40vh;
+    grid-gap: 20px;
 }
+
+.improvement {
+    position: relative;
+}
+
+.plus-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: green;
+    cursor: pointer;
+}
+
+.ameliorationHelperPrice {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 14px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none; 
+}
+
+#ameliorationButton10:hover .ameliorationHelperPrice {
+    display: block; 
+}
+
 
 #clickerButton {
     position: absolute;
