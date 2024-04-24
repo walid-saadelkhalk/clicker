@@ -407,5 +407,37 @@ body {
     margin-top: 20%;
 }
 
+/* #clicksEarnedContainer {
+    position: absolute;
+    left: 52.5%;
+    top: 74.5%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+} */
 
+#clicksEarnedContainer {
+    position: absolute;
+    left: 52.5%;
+    top: 74.5%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
 
+.clickAnimation {
+    animation-name: clickAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes clickAnimation {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}

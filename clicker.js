@@ -17,7 +17,7 @@ button.addEventListener('click', function() {
     document.body.style.backgroundPosition = "center";
     setTimeout(function() {
         document.body.style.backgroundImage = "";
-    }, 50);
+    }, 500);
     transactionList.push({
         clickCounter: count,
         priceHelper1: BigInt(priceHelper1.textContent),
