@@ -3,6 +3,7 @@ var counter = document.getElementById('clickerCounter');
 var cpsCounter = document.getElementById('cpsCounter');
 
 var count = BigInt(0);
+var transactionList = [];
 var clicksPerSecond = 0;
 
 var helper2Active = false;
@@ -10,7 +11,7 @@ var helper2Active = false;
 
 function updateCounter() {
     count += BigInt(1);
-    counter.textContent = count;
+    counter.textContent = count.toString();
 }
 
 button.addEventListener('click', function() {
@@ -21,7 +22,12 @@ button.addEventListener('click', function() {
     document.body.style.backgroundPosition = "center";
     setTimeout(function() {
         document.body.style.backgroundImage = "";
-    }, 50);
+    }, 500);
+    transactionList.push({
+        clickCounter: count,
+        priceHelper1: BigInt(priceHelper1.textContent),
+        priceHelper2: BigInt(priceHelper2.textContent)
+    });
 });
 
 
