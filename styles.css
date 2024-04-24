@@ -498,9 +498,9 @@ body {
 
 #clicksEarnedContainer {
     position: absolute;
-    left: 52.5%;
-    top: 73.5%; 
-    font-size: 16px; 
+    left: 52%;
+    top: 70.5%; 
+    font-size: 30px; 
     font-family: 'Minecraft';
     color: white;
 }

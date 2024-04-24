@@ -23,7 +23,6 @@ button.addEventListener('click', function() {
         priceHelper1: BigInt(priceHelper1.textContent),
         priceHelper2: BigInt(priceHelper2.textContent)
     });
-    // console.log("Nombre total de transactions : ", transactionList.length);
 });
 
 
