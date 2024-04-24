@@ -1,6 +1,5 @@
 body {
     background-image: url('assets/images/ps1_off.png');
-    /* background-color: black; */
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
@@ -34,13 +33,22 @@ body {
     color: white;
 }
 
+#helperName1 {
+    position: absolute;
+    left: 45%;
+    top: 1%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper1 {
     position: absolute;
     left: 45%;
     top: 5%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }
 
 #ameliorationButton1 {
@@ -72,13 +80,22 @@ body {
     color: white;
 }
 
+#helperName2 {
+    position: absolute;
+    left: 45%;
+    top: 9%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper2 {
     position: absolute;
     left: 45%;
     top: 13%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }
 
 #ameliorationButton2 {
@@ -110,13 +127,22 @@ body {
     color: white;
 }
 
+#helperName3 {
+    position: absolute;
+    left: 45%;
+    top: 17%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper3 {
     position: absolute;
     left: 45%;
     top: 21%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }
 
 #ameliorationButton3 {
@@ -148,13 +174,22 @@ body {
     color: white;
 }
 
+#helperName4 {
+    position: absolute;
+    left: 45%;
+    top: 25%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper4 {
     position: absolute;
     left: 45%;
     top: 29%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }
 
 #ameliorationButton4 {
@@ -186,13 +221,22 @@ body {
     color: white;
 }
 
+#helperName5 {
+    position: absolute;
+    left: 45%;
+    top: 33%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper5 {
     position: absolute;
     left: 45%;
     top: 37%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }
 
 #ameliorationButton5 {
@@ -224,13 +268,22 @@ body {
     color: white;
 }
 
+#helperName6 {
+    position: absolute;
+    left: 75%;
+    top: 1%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper6 {
     position: absolute;
     left: 75%;
     top: 5%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }   
 
 #ameliorationButton6 {
@@ -262,13 +315,22 @@ body {
     color: white;
 }
 
+#helperName7 {
+    position: absolute;
+    left: 75%;
+    top: 9%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper7 {
     position: absolute;
     left: 75%;
     top: 13%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }
 
 #ameliorationButton7 {
@@ -300,13 +362,22 @@ body {
     color: white;
 }
 
+#helperName8 {
+    position: absolute;
+    left: 75%;
+    top: 17%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper8 {
     position: absolute;
     left: 75%;
     top: 21%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }
 
 #ameliorationButton8 {
@@ -338,13 +409,22 @@ body {
     color: white;
 }
 
+#helperName9 {
+    position: absolute;
+    left: 75%;
+    top: 25%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper9 {
     position: absolute;
     left: 75%;
     top: 29%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }
 
 #ameliorationButton9 {
@@ -376,13 +456,22 @@ body {
     color: white;
 }
 
+#helperName10 {
+    position: absolute;
+    left: 75%;
+    top: 33%; 
+    font-size: 16px; 
+    font-family: 'Minecraft';
+    color: white;
+}
+
 #priceHelper10 {
     position: absolute;
     left: 75%;
     top: 37%; 
     font-size: 16px; 
     font-family: 'Minecraft';
-    color: white;
+    color: rgb(228, 248, 7);
 }
 
 #ameliorationButton10 {
@@ -407,19 +496,10 @@ body {
     margin-top: 20%;
 }
 
-/* #clicksEarnedContainer {
-    position: absolute;
-    left: 52.5%;
-    top: 74.5%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-} */
-
 #clicksEarnedContainer {
     position: absolute;
     left: 52.5%;
-    top: 74.5%; 
+    top: 73.5%; 
     font-size: 16px; 
     font-family: 'Minecraft';
     color: white;
