@@ -14,7 +14,7 @@ class HelperOne extends Helper {
             }
         }
     }
-    // quand il y a 3 helper on passe 3 fois sur l'upgrade et donc ça fait un chiffre enorme
+
     upgrade() {
         let activeHelperOnes = helpers.filter(helper => helper instanceof HelperOne && helper.active);
         
@@ -48,6 +48,7 @@ helperButton1.addEventListener('click', function() {
     // console.log(helper1.price);
     helperOneCounter++;
     helpers.push(helper1);
+    priceHelper1.textContent = helper1.price.toString();
     helper1.buy();
     // console.log(helpers);
     // console.log(helper1.baseCapacity)
