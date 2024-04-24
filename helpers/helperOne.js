@@ -14,7 +14,7 @@ class HelperOne extends Helper {
             }
         }
     }
-    
+    // quand il y a 3 helper on passe 3 fois sur l'upgrade et donc ça fait un chiffre enorme
     upgrade() {
         let activeHelperOnes = helpers.filter(helper => helper instanceof HelperOne && helper.active);
         
@@ -35,20 +35,12 @@ class HelperOne extends Helper {
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
 }
 
 let helpers = [];
 let helperButton1 = document.getElementById('helperButton1');
 let priceHelper1 = document.getElementById('priceHelper1');
 let ameliorationButton1 = document.getElementById('ameliorationButton1');
-let baseCapacityHelper1 = document.getElementById('baseCapacityHelper1');
 
 helperButton1.addEventListener('click', function() {
     let helper1 = new HelperOne('HelperOne', '10', '1');
