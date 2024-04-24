@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('assets/font/Minecraft.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('assets/font/Oswald.ttf') format('truetype');
+}
+
 body {
     background-image: url('assets/images/ps1_off.png');
     background-size: 100% 100%;
@@ -28,6 +38,18 @@ body {
     width: 100%;
 }
 
+.helpername {
+    display: flex;
+    align-items: center;
+}
+
+.helpername p {
+    /* margin-top : -2px; */
+    margin-left : 10px;
+    font-size: 20px;
+    font-family: 'Oswald';
+}
+
 .helper button{
     border-radius: 25px;
 }
@@ -40,13 +62,13 @@ body {
 .row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 
 .cell {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 80px;
+    grid-gap: 60px;
 }
 
 #clickerButton {
