@@ -10,18 +10,9 @@ var helper2Active = false;
 
 
 function updateCounter() {
-    count += 1;
-    counter.textContent = count;
+    count += BigInt(1);
+    counter.textContent = count.toString();
 }
-
-// let count = BigInt(0n);
-// let percentageIncrease = 5n; // 10%
-
-// function updateCounter() {
-//     let increase = count < 100n ? 1n : count * percentageIncrease / 100n;
-//     count += increase;
-//     counter.textContent = count.toString();
-// }
 
 button.addEventListener('click', function() {
     updateCounter();
@@ -40,10 +31,9 @@ button.addEventListener('click', function() {
 });
 
 
-
 // Click per second
 setInterval(function() {
-    cpsCounter.textContent = "Cps:" + clicksPerSecond;
+    cpsCounter.textContent = "Cps: " + clicksPerSecond;
     // clicksPerSecond = 0; // Réinitialiser le compteur de clics par seconde
 }, 1000);
 
