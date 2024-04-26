@@ -37,6 +37,7 @@ class HelperOne extends Helper {
     
 }
 
+
 let helpers = [];
 let helperButton1 = document.getElementById('helperButton1');
 let priceHelper1 = document.getElementById('priceHelper1');
