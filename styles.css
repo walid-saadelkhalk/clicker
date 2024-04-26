@@ -50,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    color :#baa716;
+    color :#e1c917;
     font-family: "Minecraft";
 }
 
@@ -59,10 +59,14 @@ body {
     margin-left : 10px;
     font-size: 20px;
     font-family: 'Oswald';
+    color :antiquewhite
 }
 
 .helper button{
     border-radius: 25px;
+    background-color: #1e1e1e;
+    margin-top: 10px;
+
 }
 
 .helper button:hover {
@@ -73,19 +77,31 @@ body {
 .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* background-color: aquamarine; */
+    /* background-color: rgba(19, 17, 17, 0.5); 
+    backdrop-filter: blur(10px); 
+    border: 5px solid #e4ca25; */
     height: 50vh;
     width: 90vh;
     grid-gap: 10px;
+    padding-top: 10px;
+    border-radius: 20px;
 }
 
 .cell {
+
     display: grid;
-    /* background-color: burlywood; */
+    background-color: rgba(23, 22, 22, 0.5);  
+    border : 2px solid #e4ca25;
+    border-radius: 5px;
     grid-template-columns: repeat(3, 1fr);
     height: 8vh;
-    width: 40vh;
-    grid-gap: 20px;
+    width: 25vh;
+    grid-gap: 10px;
+    margin-top : 5px;
+    margin-left: 10px;
+    padding-left : 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .improvement {
@@ -94,30 +110,32 @@ body {
 
 .plus-icon {
     position: absolute;
-    top: 40%;
-    left: 50%;
+    /* top: 40%;
+    left: 50%; */
     transform: translate(-50%, -50%);
+    margin-left : 10px;
     width: 34px;
     height: 34px;
     cursor: pointer;
+    border : none;
+    background: none;
 }
 
 .ameliorationHelperPrice {
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(30%, -95%); 
+    transform: translate(30%, -135%); 
     font-size: 22px;
     font-family: "Minecraft";
-    color:#baa716;
+    color:#e0dfd5;
     /* background-color: rgba(0, 0, 0, 0.8);  */
     background-color: black;
     padding: 5px 10px;
     border-radius: 5px;
     display: none; 
 }
-
-#ameliorationButton10:hover .ameliorationHelperPrice {
+.improvement:hover .ameliorationHelperPrice {
     display: block; 
 }
 
