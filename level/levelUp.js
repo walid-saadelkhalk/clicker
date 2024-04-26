@@ -89,9 +89,9 @@ function updateLevel(totalClicks) {
 function showClicksEarned(clicks) {
     var clicksEarnedContainer = document.getElementById('clicksEarnedContainer');
     clicksEarnedContainer.textContent = "+" + clicks;
-    clicksEarnedContainer.classList.add('clickAnimation');
+    clicksEarnedContainer.classList.add('clickAnim');
     setTimeout(function() {
-        clicksEarnedContainer.classList.remove('clickAnimation'); 
+        clicksEarnedContainer.classList.remove('clickAnim'); 
         clicksEarnedContainer.textContent = "";
     }, 1000);
 }

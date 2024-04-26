@@ -99,19 +99,6 @@ body {
 }
 
 
-/* .row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: rgba(19, 17, 17, 0.5); 
-    backdrop-filter: blur(10px); 
-    border: 5px solid #e4ca25;
-    height: 50vh;
-    width: 90vh;
-    grid-gap: 10px;
-    padding-top: 10px;
-    border-radius: 20px;
-} */
-
 .cell {
     display: flex;
     flex-direction: column;
@@ -252,28 +239,32 @@ body {
 }
 
 #clicksEarnedContainer {
-    position: absolute;
-    left: 52%;
-    top: 70.5%; 
+    position: relative;
+    left: 1100px;
+    top: 500px; 
     font-size: 30px; 
     font-family: 'Minecraft';
     color: white;
+    z-index: 3;
+    
 }
 
-.clickAnimation {
-    animation-name: clickAnimation;
+.clickAnim {
+    animation-name: fadeInOut;
     animation-duration: 2s;
     animation-timing-function: ease-out;
+    z-index: 3;
 }
 
-@keyframes clickAnimation {
+@keyframes fadeInOut {
     from {
-        transform: translateY(0);
+        transform: translateY(0px);
         opacity: 1;
     }
     to {
         transform: translateY(-50px);
         opacity: 0;
+
     }
 }
 
@@ -295,10 +286,10 @@ body {
   }
   
   .clickAnimation {
-    animation: fadeInOut 1s ease-in-out;
+    animation: fadeInOut2 1s ease-in-out;
   }
   
-  @keyframes fadeInOut {
+  @keyframes fadeInOut2 {
     0% {
       opacity: 1;
     }
@@ -310,3 +301,53 @@ body {
     }
   }
   
+
+    /* SPRITE */
+/*
+  #animation {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+    }   
+
+    .showRoll #frame {
+        border-color: hsl(0,0%,70%);
+      }
+      
+      #frame {
+        width: 50px;
+        height: 72px;
+        border: 1px solid transparent;
+        background: url(assets/sprites/peter-sprite.png) no-repeat left top;
+        animation: frame-animation 1s steps(10) infinite;    
+      }
+      
+      @keyframes frame-animation { 0% { background-position: 0px 0; } 100% { background-position: -500px 0; } }
+      
+      
+      
+      /* -------------- Roll -------------- */
+      
+      /* .showRoll #roll {
+        opacity: .2;
+      }
+      
+      #roll {
+        opacity: 0;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 72px;
+        border: 1px solid hsl(0,0%,70%);
+        background: hsl(0,0%,100%) url(assets/sprites/peter-sprite.png) no-repeat left top;
+        transition: opacity .3s linear;
+        animation:  roll-animation 1s steps(10) infinite;
+      }
+      
+      @keyframes roll-animation { 
+        0% { transform: translateX(0); } 
+        100% { transform:  translateX(-500px); } 
+      } */
+
+      
