@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('assets/font/Minecraft.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('assets/font/Oswald.ttf') format('truetype');
+}
+
 body {
     background-image: url('assets/images/ps1_off.png');
     background-size: 100% 100%;
@@ -5,12 +15,138 @@ body {
     background-position: center;
 }
 
+#game {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#boutique {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 50vh;
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding-top: 30px;
+}
+
+.helper, .improvement {
+    width: 100%;
+}
+
+.helpername {
+    display: flex;
+    align-items: center;
+}
+
+
+.price {
+    margin-top: -32px;
+    margin-left : 77px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    color :#e1c917;
+    font-family: "Minecraft";
+}
+
+.helpername p {
+    margin-top : -9px;
+    margin-left : 10px;
+    font-size: 20px;
+    font-family: 'Oswald';
+    color :antiquewhite
+}
+
+.helper button{
+    border-radius: 25px;
+    background-color: #1e1e1e;
+    margin-top: 10px;
+
+}
+
+.helper button:hover {
+    background-color: #26aee4;
+    color :beige
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* background-color: rgba(19, 17, 17, 0.5); 
+    backdrop-filter: blur(10px); 
+    border: 5px solid #e4ca25; */
+    height: 50vh;
+    width: 90vh;
+    grid-gap: 10px;
+    padding-top: 10px;
+    border-radius: 20px;
+}
+
+.cell {
+
+    display: grid;
+    background-color: rgba(23, 22, 22, 0.5);  
+    border : 2px solid #e4ca25;
+    border-radius: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    height: 8vh;
+    width: 25vh;
+    grid-gap: 10px;
+    margin-top : 5px;
+    margin-left: 10px;
+    padding-left : 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.improvement {
+    position: relative;
+}
+
+.plus-icon {
+    position: absolute;
+    /* top: 40%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    margin-left : 10px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    border : none;
+    background: none;
+}
+
+.ameliorationHelperPrice {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(30%, -135%); 
+    font-size: 22px;
+    font-family: "Minecraft";
+    color:#e0dfd5;
+    /* background-color: rgba(0, 0, 0, 0.8);  */
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none; 
+}
+.improvement:hover .ameliorationHelperPrice {
+    display: block; 
+}
+
+
 #clickerButton {
     position: absolute;
-    left: 51.5%;
-    top: 76.5%; 
+    left: 51vw;
+    top: 75vh; 
     font-size: 16px; 
 }
+
 #clickerCounter {
     position: absolute;
     left: 3%;
@@ -20,480 +156,48 @@ body {
     font-size: 50px;
 }
 
-#helperButton1 {
-    position: absolute;
-    left: 40%;
-    top: 3%; 
-    font-size: 16px; 
-    border-radius: 25px;
-}
 
-#helperButton1:hover {
-    background-color: #26aee4;
-    color: white;
-}
 
-#helperName1 {
+#cpsCounter {
     position: absolute;
-    left: 45%;
-    top: 1%; 
-    font-size: 16px; 
+    left: 3%;
+    top: 5%;
+    padding-top: 10px;
     font-family: 'Minecraft';
     color: white;
+    font-size: 20px;
 }
 
-#priceHelper1 {
+#worlds-banner {
     position: absolute;
-    left: 45%;
-    top: 5%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
+    top : 15vh;
+    left: 0;
+    width: 32vw; 
+    height: 80vh; 
+    background-color: #ba1616; 
+    overflow-y: scroll;
 }
 
-#ameliorationButton1 {
-    position: absolute;
-    left: 21%;
-    top: 50%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper1 {
-    position: absolute;
-    left: 30%;
-    top: 48.5%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
+.world {
+    width: 92%;
+    /* height: 120px;  */
+    /* background-color: #555;  */
+    margin: 10px auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-}
-
-#helperButton2 {
-    position: absolute;
-    left: 40%;
-    top: 11%; 
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-#helperButton2:hover {
-    background-color: #26aee4;
-    color: white;
-}
-
-#helperName2 {
-    position: absolute;
-    left: 45%;
-    top: 9%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#priceHelper2 {
-    position: absolute;
-    left: 45%;
-    top: 13%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
-}
-
-#ameliorationButton2 {
-    position: absolute;
-    left: 21%;
-    top: 55%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper2 {
-    position: absolute;
-    left: 30%;
-    top: 53%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#helperButton3 {
-    position: absolute;
-    left: 40%;
-    top: 19%; 
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-#helperButton3:hover {
-    background-color: #26aee4;
-    color: white;
-}
-
-#helperName3 {
-    position: absolute;
-    left: 45%;
-    top: 17%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#priceHelper3 {
-    position: absolute;
-    left: 45%;
-    top: 21%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
-}
-
-#ameliorationButton3 {
-    position: absolute;
-    left: 21%;
-    top: 60%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper3 {
-    position: absolute;
-    left: 30%;
-    top: 58%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#helperButton4 {
-    position: absolute;
-    left: 40%;
-    top: 27%; 
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-#helperButton4:hover {
-    background-color: #26aee4;
-    color: white;
-}
-
-#helperName4 {
-    position: absolute;
-    left: 45%;
-    top: 25%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#priceHelper4 {
-    position: absolute;
-    left: 45%;
-    top: 29%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
-}
-
-#ameliorationButton4 {
-    position: absolute;
-    left: 21%;
-    top: 65%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper4 {
-    position: absolute;
-    left: 30%;
-    top: 63%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#helperButton5 {
-    position: absolute;
-    left: 40%;
-    top: 35%; 
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-#helperButton5:hover {
-    background-color: #26aee4;
-    color: white;
-}
-
-#helperName5 {
-    position: absolute;
-    left: 45%;
-    top: 33%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#priceHelper5 {
-    position: absolute;
-    left: 45%;
-    top: 37%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
-}
-
-#ameliorationButton5 {
-    position: absolute;
-    left: 21%;
-    top: 70%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper5 {
-    position: absolute;
-    left: 30%;
-    top: 68%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#helperButton6 {
-    position: absolute;
-    left: 70%;
-    top: 3%; 
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-#helperButton6:hover {
-    background-color: #26aee4;
-    color: white;
-}
-
-#helperName6 {
-    position: absolute;
-    left: 75%;
-    top: 1%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#priceHelper6 {
-    position: absolute;
-    left: 75%;
-    top: 5%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
-}   
-
-#ameliorationButton6 {
-    position: absolute;
-    left: 21%;
-    top: 75%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper6 {
-    position: absolute;
-    left: 30%;
-    top: 73%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#helperButton7 {
-    position: absolute;
-    left: 70%;
-    top: 11%; 
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-#helperButton7:hover {
-    background-color: #26aee4;
-    color: white;
-}
-
-#helperName7 {
-    position: absolute;
-    left: 75%;
-    top: 9%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#priceHelper7 {
-    position: absolute;
-    left: 75%;
-    top: 13%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
-}
-
-#ameliorationButton7 {
-    position: absolute;
-    left: 21%;
-    top: 80%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper7 {
-    position: absolute;
-    left: 30%;
-    top: 78%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#helperButton8 {
-    position: absolute;
-    left: 70%;
-    top: 19%; 
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-#helperButton8:hover {
-    background-color: #26aee4;
-    color: white;
-}
-
-#helperName8 {
-    position: absolute;
-    left: 75%;
-    top: 17%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#priceHelper8 {
-    position: absolute;
-    left: 75%;
-    top: 21%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
-}
-
-#ameliorationButton8 {
-    position: absolute;
-    left: 21%;
-    top: 85%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper8 {
-    position: absolute;
-    left: 30%;
-    top: 83%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#helperButton9 {
-    position: absolute;
-    left: 70%;
-    top: 27%; 
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-#helperButton9:hover {
-    background-color: #26aee4;
-    color: white;
-}
-
-#helperName9 {
-    position: absolute;
-    left: 75%;
-    top: 25%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#priceHelper9 {
-    position: absolute;
-    left: 75%;
-    top: 29%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
-}
-
-#ameliorationButton9 {
-    position: absolute;
-    left: 21%;
-    top: 90%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper9 {
-    position: absolute;
-    left: 30%;
-    top: 88%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#helperButton10 {
-    position: absolute;
-    left: 70%;
-    top: 35%; 
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-#helperButton10:hover {
-    background-color: #26aee4;
-    color: white;
-}
-
-#helperName10 {
-    position: absolute;
-    left: 75%;
-    top: 33%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
-}
-
-#priceHelper10 {
-    position: absolute;
-    left: 75%;
-    top: 37%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: rgb(228, 248, 7);
-}
-
-#ameliorationButton10 {
-    position: absolute;
-    left: 21%;
-    top: 95%; 
-    font-size: 16px; 
-}
-
-#ameliorationHelper10 {
-    position: absolute;
-    left: 30%;
-    top: 93%; 
-    font-size: 16px; 
-    font-family: 'Minecraft';
-    color: white;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .level-display {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
-    margin-top: 20%;
+    margin-top: 0%;
+    margin-left: 3%;
+    font-family: 'Minecraft';
+    color: white;
 }
 
 #clicksEarnedContainer {
@@ -521,3 +225,37 @@ body {
         opacity: 0;
     }
 }
+
+
+.progress {
+    width: 85%;
+    height: 20px;
+    margin-left: 15%;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-top: -2%;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #e4ca25;
+    border-radius: 4px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .clickAnimation {
+    animation: fadeInOut 1s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
