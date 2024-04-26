@@ -243,9 +243,12 @@ body {
 }
 
 .level-display {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     margin-top: 0%;
+    margin-left: 3%;
+    font-family: 'Minecraft';
+    color: white;
 }
 
 #clicksEarnedContainer {
@@ -273,3 +276,37 @@ body {
         opacity: 0;
     }
 }
+
+
+.progress {
+    width: 85%;
+    height: 20px;
+    margin-left: 15%;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-top: -2%;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #e4ca25;
+    border-radius: 4px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .clickAnimation {
+    animation: fadeInOut 1s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
