@@ -16,13 +16,10 @@ function updateCounter() {
 
 button.addEventListener('click', function() {
     updateCounter();
-    document.body.style.backgroundImage = "url('assets/images/ps1_on.png')";
-    document.body.style.backgroundSize = "100% 100%";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundPosition = "center";
+    document.getElementById('overlayImage').src = "assets/images/ps1_on.png";
     setTimeout(function() {
-        document.body.style.backgroundImage = "";
-    }, 500);
+        document.getElementById('overlayImage').src = "assets/images/ps1_off.png";
+    }, 100);
     transactionList.push({
         clickCounter: count,
         priceHelper1: BigInt(priceHelper1.textContent),
