@@ -40,20 +40,19 @@ class HelperOne extends Helper {
 
 let helpers = [];
 let helperButton1 = document.getElementById('helperButton1');
-let priceHelper1 = document.getElementById('priceHelper1');
 let ameliorationButton1 = document.getElementById('ameliorationButton1');
 
+let helperOnePrice = '10';
+        
 helperButton1.addEventListener('click', function() {
-    let helper1 = new HelperOne('HelperOne', '10', '1');
-    // console.log(helper1.name);
-    // console.log(helper1.price);
+    let priceHelper1Element = document.getElementById('priceHelper1');
+    let priceHelper1 = BigInt(priceHelper1Element.textContent);
+    let helper1 = new HelperOne('HelperOne', helperOnePrice, '1');
     helperOneCounter++;
     helpers.push(helper1);
-    priceHelper1.textContent = helper1.price.toString();
     helper1.buy();
-    // console.log(helpers);
-    // console.log(helper1.baseCapacity)
-    console.log("HelperOne acheté !");
+    priceHelper1Element.textContent = (priceHelper1 * BigInt(2)).toString();
+    helperOnePrice = helper1.price.toString();
 });
 
 var upgradeApplied = false;
