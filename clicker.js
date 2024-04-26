@@ -33,7 +33,7 @@ button.addEventListener('click', function() {
 
 // Click per second
 setInterval(function() {
-    cpsCounter.textContent = "Cps: " + clicksPerSecond;
+    cpsCounter.textContent = "Cps:" + clicksPerSecond;
     // clicksPerSecond = 0; // Réinitialiser le compteur de clics par seconde
 }, 1000);
 
