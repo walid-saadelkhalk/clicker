@@ -9,11 +9,24 @@
 }
 
 body {
-    background-image: url('assets/images/ps1_off.png');
+    /* background-image: url('assets/images/ps1_off.png'); */
+    background-color: #2b2f33;
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
 }
+
+
+
+#overlayImage {
+    position: absolute;
+    margin-left: 45vw;
+    margin-top: 150px;
+    object-fit: cover; 
+    z-index: 1;
+    pointer-events: none;
+}
+
 
 #game {
     position: relative;
@@ -23,15 +36,19 @@ body {
 
 #boutique {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 60vw;
-    height: 50vh;
+    top: 53px;
+    right: 170px;
+    width: 50vw;
+    height: 88vh;
     /* background-color: aqua; */
+    background-color: rgba(19, 17, 17, 0.5); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    border: 2px solid #e4ca25;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    padding-top: 30px;
+    padding-left: 30px;
 }
 
 .helper, .improvement {
@@ -74,20 +91,50 @@ body {
     color :beige
 }
 
-.row {
+#boutique .row{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px; 
+}
+
+
+/* .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* background-color: rgba(19, 17, 17, 0.5); 
+    background-color: rgba(19, 17, 17, 0.5); 
     backdrop-filter: blur(10px); 
-    border: 5px solid #e4ca25; */
+    border: 5px solid #e4ca25;
     height: 50vh;
     width: 90vh;
     grid-gap: 10px;
     padding-top: 10px;
     border-radius: 20px;
-}
+} */
 
 .cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cell .helper-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content:space-evenly; 
+    margin: 10px 0;
+    padding : 0.5px;
+    background-color: rgba(23, 22, 22, 0.5);  
+    border : 2px solid #e4ca25;
+    border-radius: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    height: 8vh;
+    width: 25vh;
+    width: 100%;
+}
+
+/* .cell {
 
     display: grid;
     background-color: rgba(23, 22, 22, 0.5);  
@@ -102,7 +149,7 @@ body {
     padding-left : 10px;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .improvement {
     position: relative;
@@ -142,9 +189,11 @@ body {
 
 #clickerButton {
     position: absolute;
-    left: 51vw;
-    top: 75vh; 
-    font-size: 16px; 
+    left: 64.5vw;
+    top: 60vh; 
+    font-size: 20px; 
+    z-index: 2;
+    opacity: 0;
 }
 
 #clickerCounter {
@@ -174,8 +223,10 @@ body {
     left: 0;
     width: 32vw; 
     height: 80vh; 
-    background-color: #ba1616; 
+    background-color: #2b2f33; 
     overflow-y: scroll;
+    scrollbar-width: thin;
+    direction: rtl;
 }
 
 .world {
