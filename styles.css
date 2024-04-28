@@ -87,7 +87,7 @@ body {
 }
 
 .helper button:hover {
-    background-color: #26aee4;
+    background-color: #e1c917;
     color :beige
 }
 
@@ -121,31 +121,12 @@ body {
     width: 100%;
 }
 
-/* .cell {
-
-    display: grid;
-    background-color: rgba(23, 22, 22, 0.5);  
-    border : 2px solid #e4ca25;
-    border-radius: 5px;
-    grid-template-columns: repeat(3, 1fr);
-    height: 8vh;
-    width: 25vh;
-    grid-gap: 10px;
-    margin-top : 5px;
-    margin-left: 10px;
-    padding-left : 10px;
-    justify-content: center;
-    align-items: center;
-} */
-
 .improvement {
     position: relative;
 }
 
 .plus-icon {
     position: absolute;
-    /* top: 40%;
-    left: 50%; */
     transform: translate(-50%, -50%);
     margin-left : 10px;
     width: 34px;
@@ -159,11 +140,10 @@ body {
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(30%, -135%); 
+    transform: translate(0%, -105%); 
     font-size: 22px;
     font-family: "Minecraft";
     color:#e0dfd5;
-    /* background-color: rgba(0, 0, 0, 0.8);  */
     background-color: black;
     padding: 5px 10px;
     border-radius: 5px;
@@ -185,11 +165,12 @@ body {
 
 #clickerCounter {
     position: absolute;
-    left: 3%;
-    top: -3%;
+    right: 15%;
+    top: 25px;
     font-family: 'Minecraft';
     color: white;
-    font-size: 50px;
+    font-size: 80px;
+    z-index: 6;
 }
 
 
@@ -206,13 +187,16 @@ body {
 
 #worlds-banner {
     position: absolute;
-    top : 15vh;
+    top : 6vh;
     left: 0;
     width: 32vw; 
-    height: 80vh; 
-    background-color: #2b2f33; 
+    height: 87.5vh; 
+    /* background-color: #2b2f33;  */
+    background-color: rgba(23, 22, 22, 0.5);  
+    border : 2px solid #e4ca25;
+    border-radius: 25px;
     overflow-y: scroll;
-    scrollbar-width: thin;
+    scrollbar-width:none;
     direction: rtl;
 }
 
@@ -327,6 +311,7 @@ body {
 
 }
 
+
 #kazuya_world {
     position: relative; 
 }
@@ -335,6 +320,95 @@ body {
     position: absolute; 
     top: 0;
     left: 0;
+}
+#kratos_world .background-image{
+
+    background-image: url('assets/images/godofwar.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#lara_world .background-image{
+
+    background-image: url('assets/images/tombraider.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#resident_world .background-image{
+
+    background-image: url('assets/images/residentevil.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#rayman_world .background-image{
+
+    background-image: url('assets/images/gamerayman.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#metal_world .background-image{
+
+    background-image: url('assets/images/metalgear.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#spider_world .background-image{
+
+    background-image: url('assets/images/newyork.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
 }
 
 .helper-images-container {
