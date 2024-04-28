@@ -3,7 +3,7 @@ let counter = document.getElementById('clickerCounter');
 let cpsCounter = document.getElementById('cpsCounter');
 let goldButton = document.getElementById('goldButton');
 
-let count = BigInt(999999);
+let count = BigInt(1);
 let transactionList = [];
 let clicksPerSecond = 0;
 

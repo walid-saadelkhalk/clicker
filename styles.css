@@ -634,28 +634,29 @@ body {
 
     @keyframes frame-animation2 { 0% { background-position: 0px 0; } 15% { background-position: 0px 0; } 100% { background-position: -855px ; } }
 
-.world-icon2,
-.world-icon3,
-.world-icon4,
-.world-icon5,
-.world-icon6,
-.world-icon7,
-.world-icon8,
-.world-icon9,
-.world-icon10 { 
+
+#crash_world,
+#fireman_world,
+#kazuya_world,
+#kratos_world,
+#lara_world,
+#resident_world,
+#rayman_world,
+#metal_world,
+#spider_world{
     filter: contrast(10%);
     transition: filter 0.5s ease;
 }
 
-.level-2 .world-icon2,
-.level-3 .world-icon3,
-.level-4 .world-icon4,
-.level-5 .world-icon5,
-.level-6 .world-icon6,
-.level-7 .world-icon7,
-.level-8 .world-icon8,
-.level-9 .world-icon9,
-.level-10 .world-icon10 {
+.level-2 #crash_world,
+.level-3 #fireman_world,
+.level-4 #kazuya_world,
+.level-5 #kratos_world,
+.level-6 #lara_world,
+.level-7 #resident_world,
+.level-8 #rayman_world,
+.level-9 #metal_world,
+.level-10 #spider_world {
     filter: none;
 }
 
