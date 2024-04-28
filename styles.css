@@ -216,18 +216,169 @@ body {
     direction: rtl;
 }
 
+
 .world {
-    width: 92%;
-    /* height: 120px;  */
-    /* background-color: #555;  */
+    width: 100%;
     margin: 10px auto; 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
+    height: 150px; 
+    overflow-x: auto; 
+    overflow-y: hidden; 
+
 }
+
+#andy_world {
+    position: relative; 
+}
+
+#andy_helpers {
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+
+
+#andy_world .background-image{
+
+    background-image: url('assets/images/heart_of_darkness.png');
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#andy_world .background-image::before{
+    content:"";
+    width: 1400px;
+    visibility: hidden;
+}
+
+#crash_world .background-image{
+
+    background-image: url('assets/images/bandicout.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#crash_world {
+    position: relative; 
+}
+
+#crash_helpers {
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+#fireman_world .background-image{
+
+    background-image: url('assets/images/megaman.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#fireman_world {
+    position: relative; 
+}
+
+#fireman_helpers {
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+#kazuya_world .background-image{
+
+    background-image: url('assets/images/tekken.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#kazuya_world {
+    position: relative; 
+}
+
+#kazuya_helpers {
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+.helper-images-container {
+    
+    position: absolute;
+    top: 0;
+    left: 0; 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px; 
+    z-index: 2; 
+    direction :ltr;
+}
+
+.helperOne-image {
+    width: 55px; 
+    height: auto; 
+    margin-right: 5px;
+}
+
+.helperTwo-image {
+    width: 55px; 
+    height: auto; 
+    margin-right: 1px;
+}
+
+.helperThree-image {
+    width: 130px; 
+    height: auto; 
+    margin-right: 1px;
+}
+
+.helperFour-image {
+    width: 46px; 
+    height: auto; 
+    margin-right: 1px;
+}
+
+
 
 .level-display {
     font-size: 30px;
