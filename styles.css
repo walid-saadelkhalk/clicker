@@ -87,7 +87,7 @@ body {
 }
 
 .helper button:hover {
-    background-color: #26aee4;
+    background-color: #e1c917;
     color :beige
 }
 
@@ -121,31 +121,12 @@ body {
     width: 100%;
 }
 
-/* .cell {
-
-    display: grid;
-    background-color: rgba(23, 22, 22, 0.5);  
-    border : 2px solid #e4ca25;
-    border-radius: 5px;
-    grid-template-columns: repeat(3, 1fr);
-    height: 8vh;
-    width: 25vh;
-    grid-gap: 10px;
-    margin-top : 5px;
-    margin-left: 10px;
-    padding-left : 10px;
-    justify-content: center;
-    align-items: center;
-} */
-
 .improvement {
     position: relative;
 }
 
 .plus-icon {
     position: absolute;
-    /* top: 40%;
-    left: 50%; */
     transform: translate(-50%, -50%);
     margin-left : 10px;
     width: 34px;
@@ -159,11 +140,10 @@ body {
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(30%, -135%); 
+    transform: translate(0%, -105%); 
     font-size: 22px;
     font-family: "Minecraft";
     color:#e0dfd5;
-    /* background-color: rgba(0, 0, 0, 0.8);  */
     background-color: black;
     padding: 5px 10px;
     border-radius: 5px;
@@ -185,11 +165,12 @@ body {
 
 #clickerCounter {
     position: absolute;
-    left: 3%;
-    top: -3%;
+    right: 15%;
+    top: 25px;
     font-family: 'Minecraft';
     color: white;
-    font-size: 50px;
+    font-size: 80px;
+    z-index: 6;
 }
 
 
@@ -206,28 +187,274 @@ body {
 
 #worlds-banner {
     position: absolute;
-    top : 15vh;
+    top : 6vh;
     left: 0;
     width: 32vw; 
-    height: 80vh; 
-    background-color: #2b2f33; 
+    height: 87.5vh; 
+    /* background-color: #2b2f33;  */
+    background-color: rgba(23, 22, 22, 0.5);  
+    border : 2px solid #e4ca25;
+    border-radius: 25px;
     overflow-y: scroll;
-    scrollbar-width: thin;
+    scrollbar-width:none;
     direction: rtl;
 }
 
+
 .world {
-    width: 92%;
-    /* height: 120px;  */
-    /* background-color: #555;  */
+    width: 100%;
     margin: 10px auto; 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
+    height: 150px; 
+    overflow-x: auto; 
+    overflow-y: hidden; 
+
 }
+
+#andy_world {
+    position: relative; 
+}
+
+#andy_helpers {
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+
+
+#andy_world .background-image{
+
+    background-image: url('assets/images/heart_of_darkness.png');
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+/* #andy_world .background-image::before{
+    content:"";
+    width: 1400px;
+    visibility: hidden;
+} */
+
+#crash_world .background-image{
+
+    background-image: url('assets/images/bandicout.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#crash_world {
+    position: relative; 
+}
+
+#crash_helpers {
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+#fireman_world .background-image{
+
+    background-image: url('assets/images/megaman.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#fireman_world {
+    position: relative; 
+}
+
+#fireman_helpers {
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+#kazuya_world .background-image{
+
+    background-image: url('assets/images/tekken.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+
+#kazuya_world {
+    position: relative; 
+}
+
+#kazuya_helpers {
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+#kratos_world .background-image{
+
+    background-image: url('assets/images/godofwar.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#lara_world .background-image{
+
+    background-image: url('assets/images/tombraider.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#resident_world .background-image{
+
+    background-image: url('assets/images/residentevil.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#rayman_world .background-image{
+
+    background-image: url('assets/images/gamerayman.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#metal_world .background-image{
+
+    background-image: url('assets/images/metalgear.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+#spider_world .background-image{
+
+    background-image: url('assets/images/newyork.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    left: 0;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+
+}
+
+.helper-images-container {
+    
+    position: absolute;
+    top: 0;
+    left: 0; 
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px; 
+    z-index: 2; 
+    direction :ltr;
+}
+
+.helperOne-image {
+    width: 55px; 
+    height: auto; 
+    margin-right: 15px;
+}
+
+.helperTwo-image {
+    width: 55px; 
+    height: auto; 
+    margin-right: 1px;
+}
+
+.helperThree-image {
+    width: 130px; 
+    height: auto; 
+    margin-right: 1px;
+}
+
+.helperFour-image {
+    width: 46px; 
+    height: auto; 
+    margin-right: 1px;
+}
+
+
 
 .level-display {
     font-size: 30px;
@@ -312,53 +539,100 @@ body {
     margin-top: 45vh;
 }
 
-    /* SPRITE */
-/*
-  #animation {
-  display: inline-block;
-  position: relative;
-  text-align: center;
+    /* -------------------------- SPRITE ------------------------------------------ */
+
+
+    
+    .sprite #animation-spider {
+        display: block;
+        position: fixed;
+        right: 13%;
+        top : 33%;
+        z-index: 4;
+
     }   
 
-    .showRoll #frame {
-        border-color: hsl(0,0%,70%);
-      }
-      
-      #frame {
-        width: 50px;
-        height: 72px;
-        border: 1px solid transparent;
-        background: url(assets/sprites/peter-sprite.png) no-repeat left top;
-        animation: frame-animation 1s steps(10) infinite;    
-      }
-      
-      @keyframes frame-animation { 0% { background-position: 0px 0; } 100% { background-position: -500px 0; } }
-      
-      
-      
-      /* -------------- Roll -------------- */
-      
-      /* .showRoll #roll {
-        opacity: .2;
-      }
-      
-      #roll {
-        opacity: 0;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 500px;
-        height: 72px;
-        border: 1px solid hsl(0,0%,70%);
-        background: hsl(0,0%,100%) url(assets/sprites/peter-sprite.png) no-repeat left top;
-        transition: opacity .3s linear;
-        animation:  roll-animation 1s steps(10) infinite;
-      }
-      
-      @keyframes roll-animation { 
-        0% { transform: translateX(0); } 
-        100% { transform:  translateX(-500px); } 
-      } */
+
+
+    #frame-spider {
+    width: 57px;
+    height: 215px;
+    /* border: 1px solid transparent; */
+    background: url(assets/sprites/andy_sprite.png) no-repeat left bottom;
+    animation: frame-animation 1s steps(21) infinite alternate;    
+    overflow: hidden;
+    /* margin:3em auto; */
+    }
+
+    @keyframes frame-animation { 0% { background-position: 0px 0; } 100% { background-position: -1167px ; } }
+
+
+
+    .sprite #animation-crash {
+        display: block;
+        position: fixed;
+        right: 43.5%;
+        top : 50%;
+        z-index: 4;
+
+    }
+
+    #frame-crash {
+    width: 50px;
+    height: 46px;
+    border: 1px solid transparent;
+    background: url(assets/sprites/crash_sprite2.png) no-repeat left top;
+    animation: frame-animation3 1s steps(14) infinite alternate;
+    overflow: hidden;
+    }
+
+    @keyframes frame-animation3 { 0% { background-position: 0px 0; } 35% { background-position: 0px 0; } 100% { background-position: -772px ; } }
+
+
+
+
+    .sprite #animation-fireman {
+        display: block;
+        position: fixed;
+        right: 3%;
+        top : 75%;
+        z-index: 4;
+
+    }
+
+    #frame-fireman {
+    width: 114px;
+    height: 58px;
+    border: 1px solid transparent;
+    background: url(assets/sprites/fireman_sprite.png) no-repeat left top;
+    animation: frame-animation4 1.5s steps(17) infinite  ;
+    overflow: hidden;
+    }
+
+    @keyframes frame-animation4 { 0% { background-position: 0px 0; } 30% { background-position: 0px 0; } 100% { background-position: -1928px ; } }
+
+
+
+
+    .sprite #animation-kazuya {
+        display: block;
+        position: fixed;
+        right: 24%;
+        top : 68%;
+        z-index: 4;
+
+    }
+
+    #frame-kazuya {
+    width: 115px;
+    height: 114px;
+    border: 1px solid transparent;
+    background: url(assets/sprites/kazuya_sprite.png) no-repeat left top;
+    animation: frame-animation2 1.2s steps(8) infinite alternate;
+    overflow: hidden;
+    }
+
+    @keyframes frame-animation2 { 0% { background-position: 0px 0; } 15% { background-position: 0px 0; } 100% { background-position: -855px ; } }
 
 .world-icon2,
 .world-icon3,

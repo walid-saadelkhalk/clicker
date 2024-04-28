@@ -3,15 +3,19 @@ let counter = document.getElementById('clickerCounter');
 let cpsCounter = document.getElementById('cpsCounter');
 let goldButton = document.getElementById('goldButton');
 
-
-let count = BigInt(0);
+let count = BigInt(999999);
 let transactionList = [];
 let clicksPerSecond = 0;
 
 // Fonction pour mettre à jour le compteur et enregistrer les clics dans le stockage local
 function updateCounter() {
     count += BigInt(1);
-    counter.textContent = count.toString();
+    if (count >= BigInt(1000000)) {
+        var countInMillions = Number(count) / 1000000;
+        counter.innerHTML = countInMillions.toFixed(5) + "<br> million"; // Keep 2 decimals
+    } else {
+        counter.textContent = count.toString();
+    }
     let clickEvent = new CustomEvent('clickEvent', { detail: { totalClicks: count } });
     document.dispatchEvent(clickEvent);
     
@@ -32,18 +36,4 @@ button.addEventListener('click', function() {
     });
     // console.log(transactionList);
 });
-
-// Click per second
-setInterval(function() {
-    cpsCounter.textContent = "Cps: " + clicksPerSecond;
-    // clicksPerSecond = 0; // Réinitialiser le compteur de clics par seconde
-}, 1000);
-
-
-// button.addEventListener('click', function() {
-//     clicksPerSecond++;
-// });
-
-
-
 

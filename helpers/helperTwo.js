@@ -40,17 +40,27 @@ let helpers2 = [];
 let helperButton2 = document.getElementById('helperButton2');
 let ameliorationButton2 = document.getElementById('ameliorationButton2');
 
-let helperTwoPrice = '100';
+let helperTwoPrice = '30';
         
 helperButton2.addEventListener('click', function() {
     let priceHelper2Element = document.getElementById('priceHelper2');
     let priceHelper2 = BigInt(priceHelper2Element.textContent);
-    let helper2 = new HelperTwo('HelperTwo', helperTwoPrice, '1');
-    helperTwoCounter++;
-    helpers2.push(helper2);
-    helper2.buy();
-    priceHelper2Element.textContent = (priceHelper2 * BigInt(2)).toString();
-    helperTwoPrice = helper2.price.toString();
+    if (count >= priceHelper2) {
+        let helper2 = new HelperTwo('HelperTwo', helperTwoPrice, '2');
+        helperTwoCounter++;
+        helpers2.push(helper2);
+        helper2.buy();
+        priceHelper2Element.textContent = (priceHelper2 * BigInt(2)).toString();
+        helperTwoPrice = helper2.price.toString();
+
+        let helperTwoImage = document.createElement('img');
+        helperTwoImage.src = 'assets/sprites/crash_world.png';
+        helperTwoImage.classList.add('helperTwo-image');
+
+        let crashWorldContainer = document.getElementById('crash_world');
+        let helperImagesContainer = crashWorldContainer.querySelector('.helper-images-container');
+        helperImagesContainer.appendChild(helperTwoImage);
+    }
 });
 
 var upgradeApplied = false;
