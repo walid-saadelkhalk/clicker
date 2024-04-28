@@ -307,6 +307,12 @@ body {
     left: 100px;
 }
 
+#goldbutton {
+    margin-left: 33vw;
+    margin-top: 10vh;
+}
+
+
     /* SPRITE */
 /*
   #animation {
@@ -355,4 +361,36 @@ body {
         100% { transform:  translateX(-500px); } 
       } */
 
-      
+/* .world-icon2,
+.world-icon3,
+.world-icon4,
+.world-icon5,
+.world-icon6,
+.world-icon7,
+.world-icon8,
+.world-icon9,
+.world-icon10 { */
+    /* filter: grayscale(100%); */
+    /* filter: contrast(10%);
+    transition: filter 0.5s ease; */
+/* }
+
+.world-icon3.level-2 {
+    filter: contrast(10%);
+}
+
+.world-icon.level-3 {
+    filter: grayscale(60%);
+}
+
+.world-icon.level-4 {
+    filter: grayscale(40%);
+}
+
+.world-icon.level-5 {
+    filter: grayscale(20%);
+}
+
+.world-icon.level-6 {
+    filter: grayscale(0%);
+} */

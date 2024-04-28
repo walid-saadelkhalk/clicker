@@ -59,7 +59,7 @@ document.addEventListener('clickEvent', function(event) {
 
 
 function updateLevel(totalClicks) {
-    // console.log("Nombre total de clics : ", totalClicks); 
+    // console.log("Nombre total de clics : ", totalClicks);
     if (totalClicks >= 140){
         level = 10;
         count += BigInt(9);
@@ -101,7 +101,14 @@ function updateLevel(totalClicks) {
         count += BigInt(0);
         showClicksEarned(1);
     }
-
+        // let worldIcons = document.querySelectorAll('.world-icon');
+    // worldIcons.forEach(icon => {
+    //     icon.style.filter = ''; // Réinitialise d'abord tous les filtres
+    //     if (level >= 2 && level <= 6) {
+    //         // Selon le niveau, ajustez le filtre pour ne pas griser le monde
+    //         let grayscaleValue = (6 - level) * 20; // Calcule la valeur de gris en fonction du niveau
+    //         icon.style.filter = `grayscale(${grayscaleValue}%)`;
+    // }
     levelElement.textContent = level.toString();
     localStorage.setItem('level', level.toString());
 }
