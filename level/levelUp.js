@@ -49,23 +49,42 @@
 // });
 
 
-
-var levelElement = document.getElementById('currentLevel');
-var levelProgressBar = document.getElementById('levelProgressBar');
-var level = 1;
+let levelElement = document.getElementById('currentLevel');
+let level = 1;
 document.addEventListener('clickEvent', function(event) {
-    var totalClicks = event.detail.totalClicks;
+    let totalClicks = event.detail.totalClicks;
     updateLevel(totalClicks);
     projectProgression(level);
 });
 
 
 function updateLevel(totalClicks) {
-    if (totalClicks >= 100) {
+    // console.log("Nombre total de clics : ", totalClicks); 
+    if (totalClicks >= 140){
+        level = 10;
+        count += BigInt(9);
+        showClicksEarned(10);
+    } else if (totalClicks >= 130) {
+        level = 9;
+        count += BigInt(8);
+        showClicksEarned(9);
+    } else if (totalClicks >= 120) {
+        level = 8;
+        count += BigInt(7);
+        showClicksEarned(8);
+    } else if (totalClicks >= 110) {
+        level = 7;
+        count += BigInt(6);
+        showClicksEarned(7);
+    } else if (totalClicks >= 100) {
+        level = 6;
+        count += BigInt(5);
+        showClicksEarned(6);
+    } else if (totalClicks >= 80) {
         level = 5;
         count += BigInt(4);
         showClicksEarned(5);
-    } else if (totalClicks >= 80) {
+    } else if (totalClicks >= 60) {
         level = 4;
         count += BigInt(3);
         showClicksEarned(4);
@@ -84,10 +103,11 @@ function updateLevel(totalClicks) {
     }
 
     levelElement.textContent = level.toString();
+    localStorage.setItem('level', level.toString());
 }
 
 function showClicksEarned(clicks) {
-    var clicksEarnedContainer = document.getElementById('clicksEarnedContainer');
+    let clicksEarnedContainer = document.getElementById('clicksEarnedContainer');
     clicksEarnedContainer.textContent = "+" + clicks;
     clicksEarnedContainer.classList.add('clickAnim');
     setTimeout(function() {

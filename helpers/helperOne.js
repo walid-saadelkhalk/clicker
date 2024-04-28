@@ -53,6 +53,7 @@ helperButton1.addEventListener('click', function() {
     helper1.buy();
     priceHelper1Element.textContent = (priceHelper1 * BigInt(2)).toString();
     helperOnePrice = helper1.price.toString();
+    localStorage.setItem('helperOneBought', 'true')
 });
 
 var upgradeApplied = false;
