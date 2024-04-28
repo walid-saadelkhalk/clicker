@@ -43,16 +43,30 @@ let helperButton1 = document.getElementById('helperButton1');
 let ameliorationButton1 = document.getElementById('ameliorationButton1');
 
 let helperOnePrice = '10';
-        
+
+
 helperButton1.addEventListener('click', function() {
     let priceHelper1Element = document.getElementById('priceHelper1');
     let priceHelper1 = BigInt(priceHelper1Element.textContent);
-    let helper1 = new HelperOne('HelperOne', helperOnePrice, '1');
-    helperOneCounter++;
-    helpers.push(helper1);
-    helper1.buy();
-    priceHelper1Element.textContent = (priceHelper1 * BigInt(2)).toString();
-    helperOnePrice = helper1.price.toString();
+    if (count >= priceHelper1) {
+        let helper1 = new HelperOne('HelperOne', helperOnePrice, '1');
+        helperOneCounter++;
+        helpers.push(helper1);
+        helper1.buy();
+        priceHelper1Element.textContent = (priceHelper1 * BigInt(2)).toString();
+        helperOnePrice = helper1.price.toString();
+
+
+        let helperOneImage = document.createElement('img');
+        helperOneImage.src = 'assets/sprites/andy_world.png';
+        helperOneImage.classList.add('helperOne-image');
+
+        let andyWorldContainer = document.getElementById('andy_world');
+        let helperImagesContainer = andyWorldContainer.querySelector('.helper-images-container');
+        helperImagesContainer.appendChild(helperOneImage);
+    }
+
+
 });
 
 var upgradeApplied = false;
