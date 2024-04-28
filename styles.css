@@ -240,11 +240,11 @@ body {
 
 }
 
-#andy_world .background-image::before{
+/* #andy_world .background-image::before{
     content:"";
     width: 1400px;
     visibility: hidden;
-}
+} */
 
 #crash_world .background-image{
 
@@ -321,13 +321,14 @@ body {
     top: 0;
     left: 0;
 }
+
 #kratos_world .background-image{
 
     background-image: url('assets/images/godofwar.png');
     background-size: cover;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow-x: auto;
     left: 0;
     width: 600px;
@@ -417,9 +418,10 @@ body {
     top: 0;
     left: 0; 
     height: 100%;
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: flex-start; 
+    flex-wrap: nowrap;
     align-items: center;
     overflow-x: auto;
     overflow-y: hidden;
@@ -431,7 +433,7 @@ body {
 .helperOne-image {
     width: 55px; 
     height: auto; 
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 .helperTwo-image {
