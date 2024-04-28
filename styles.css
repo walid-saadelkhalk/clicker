@@ -373,38 +373,14 @@ body {
     transition: filter 0.5s ease;
 }
 
-.level-2 .world-icon2 {
-    filter: none;
-}
-
-.level-3 .world-icon3 {
-    filter: none;
-}
-
-.level-4 .world-icon4 {
-    filter: none;
-}
-
-.level-5 .world-icon5 {
-    filter: none;
-}
-
-.level-6 .world-icon6 {
-    filter: none;
-}
-
-.level-7 .world-icon7 {
-    filter: none;
-}
-
-.level-8 .world-icon8 {
-    filter: none;
-}
-
-.level-9 .world-icon9 {
-    filter: none;
-}
-
+.level-2 .world-icon2,
+.level-3 .world-icon3,
+.level-4 .world-icon4,
+.level-5 .world-icon5,
+.level-6 .world-icon6,
+.level-7 .world-icon7,
+.level-8 .world-icon8,
+.level-9 .world-icon9,
 .level-10 .world-icon10 {
     filter: none;
 }
