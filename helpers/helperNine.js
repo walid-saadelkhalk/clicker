@@ -1,9 +1,13 @@
+// Initialize helperNine variables
+// HelperNine button
+
 var helperButton9 = document.getElementById('helperButton9');
 var priceHelper9 = document.getElementById('priceHelper9');
 var helper9Active = false;
 var basePriceHelper9 = BigInt(priceHelper9.textContent); 
 var exponentHelper9 = 1;
 
+// HelperNine button event listener
 helperButton9.addEventListener('click', function() {
     if (count >= basePriceHelper9 && !helper9Active) {
         count -= basePriceHelper9;

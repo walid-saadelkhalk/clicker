@@ -1,3 +1,10 @@
+//Description: This file contains the functions to save the click count, level and helpers bought in the local storage
+// The script listens to the DOMContentLoaded event and saves the click count, level and helpers bought in the local storage.
+// The script also contains a function to reset the game.
+// The script initializes the click count, level and helpers bought when the document is ready.
+
+
+// Listener to save the click count, level and helpers bought in the local storage
 document.addEventListener('DOMContentLoaded', () => {
     let savedClickCount = localStorage.getItem('gamer');
     if (savedClickCount !== null) {
@@ -15,18 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let helper1 = new HelperOne('HelperOne', '10', '1');
         helpers.push(helper1);
         helper1.buy();
-    // var helperOneCount = localStorage.getItem('helperOneCount');
-    // if (helperOneCount !== null) {
-    //     helperOneCounter = parseInt(helperOneCount);
-    //     for (let i = 0; i < helperOneCounter; i++) {
-    //         let helper1 = new HelperOne('HelperOne', '10', '1');
-    //         helpers.push(helper1);
-    //         helper1.buy();
-    //     }
-    // }
     }
 });
 
+
+// Function to reset all the game
 function resetCounter() {
     count = BigInt(0);
     counter.textContent = count.toString();

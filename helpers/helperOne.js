@@ -1,20 +1,24 @@
+// Description: Contains the helperOne class and its methods.
+// The helperOne class is a subclass of the Helper class and has its own specific methods.
+// The helperOne class is used to create helper objects that increment the counter automatically.
+// The helperOne class has a constructor method that takes in the name, price, and baseCapacity of the helper object.
 let helperOneCounter = 0;
 
+// HelperOne class
 class HelperOne extends Helper {
     constructor(name, price, baseCapacity) {
         super(BigInt(price), BigInt(baseCapacity))
         this.name = name + helperOneCounter;
     }
-    
+    // Function to add the helperOne's capacity to the counter
     static updateCapacityForAllHelpers(helpers) {
         for (let i = 0; i < helpers.length; i++) {
             if (helpers[i].active) {
                 helpers[i].capacity += helpers[i].capacity * BigInt(2) / BigInt(100);
-                console.log("La capacité de l'helperOne a été doublée :", helpers[i].capacity);
             }
         }
     }
-
+    // Function to upgrade the helperOne's capacity
     upgrade() {
         let activeHelperOnes = helpers.filter(helper => helper instanceof HelperOne && helper.active);
         
@@ -28,10 +32,7 @@ class HelperOne extends Helper {
             for (let helper of activeHelperOnes) {
                 helper.baseCapacity = newBaseCapacity;
                 helper.capacity = newBaseCapacity;
-                console.log("Capacité de", helper.name, "après l'amélioration :", helper.capacity);
             }
-    
-            console.log("Amélioration appliquée à tous les helperOne actifs !");
         }
     }
     
@@ -44,7 +45,7 @@ let ameliorationButton1 = document.getElementById('ameliorationButton1');
 
 let helperOnePrice = '10';
 
-
+// HelperOne button event listener
 helperButton1.addEventListener('click', function() {
     let priceHelper1Element = document.getElementById('priceHelper1');
     let priceHelper1 = BigInt(priceHelper1Element.textContent);
@@ -72,7 +73,7 @@ helperButton1.addEventListener('click', function() {
 
 var upgradeApplied = false;
 
-
+// Amelioration button event listener
 ameliorationButton1.addEventListener('click', function() {
     let priceImprovement = BigInt(ameliorationHelper1.textContent);
     if (count >= priceImprovement) {

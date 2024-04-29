@@ -1,9 +1,13 @@
+// Initialize helperEight variables
+// HelperEight button
+
 var helperButton8 = document.getElementById('helperButton8');
 var priceHelper8 = document.getElementById('priceHelper8');
 var helper8Active = false;
 var basePriceHelper8 = BigInt(priceHelper8.textContent); 
 var exponentHelper8 = 1;
 
+// HelperEight button event listener
 helperButton8.addEventListener('click', function() {
     if (count >= basePriceHelper8 && !helper8Active) {
         count -= basePriceHelper8;

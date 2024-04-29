@@ -1,20 +1,26 @@
-let HelperFourCounter = 0;
+// Description: HelperFour class and its functionalities
+// The HelperFour class is a subclass of the Helper class and has its own specific methods.
+// The HelperFour class is used to create helper objects that increment the counter automatically.
+// The HelperFour class has a constructor method that takes in the name, price, and baseCapacity of the helper object.
 
+
+let HelperFourCounter = 0;
+// HelperFour class
 class HelperFour extends Helper {
     constructor(name, price, baseCapacity) {
         super(BigInt(price), BigInt(baseCapacity))
         this.name = name + HelperFourCounter;
     }
     
+    // Function to add the helperFour's capacity to the counter
     static updateCapacityForAllhelpers4(helpers4) {
         for (let i = 0; i < helpers4.length; i++) {
             if (helpers4[i].active) {
                 helpers4[i].capacity += helpers4[i].capacity * BigInt(2) / BigInt(100);
-                console.log("La capacité de l'HelperFour a été doublée :", helpers4[i].capacity);
             }
         }
     }
-
+    // Function to upgrade the helperFour's capacity
     upgrade() {
         let activeHelperFours = helpers4.filter(helper => helper instanceof HelperFour && helper.active);
         
@@ -28,7 +34,6 @@ class HelperFour extends Helper {
             for (let helper of activeHelperFours) {
                 helper.baseCapacity = newBaseCapacity;
                 helper.capacity = newBaseCapacity;
-                console.log("Capacité de", helper.name, "après l'amélioration :", helper.capacity);
             }
     
         }
@@ -41,7 +46,8 @@ let helperButton4 = document.getElementById('helperButton4');
 let ameliorationButton4 = document.getElementById('ameliorationButton4');
 
 let HelperFourPrice = '40';
-        
+
+// HelperFour button event listener 
 helperButton4.addEventListener('click', function() {
     let priceHelper4Element = document.getElementById('priceHelper4');
     let priceHelper4 = BigInt(priceHelper4Element.textContent);
@@ -65,7 +71,7 @@ helperButton4.addEventListener('click', function() {
 
 var upgradeApplied = false;
 
-
+// HelperFour amelioration button event listener
 ameliorationButton1.addEventListener('click', function() {
     let priceImprovement = BigInt(ameliorationHelper4.textContent);
     if (count >= priceImprovement) {

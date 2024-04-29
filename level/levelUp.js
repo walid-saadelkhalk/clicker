@@ -1,53 +1,8 @@
-// var levelElement = document.getElementById('currentLevel');
-// var level = 1;
-
-// function updateLevel() {
-//     var totalClicks = transactionList.length;
-//     console.log("Nombre total de clics : ", totalClicks);
-
-    
-//     if (totalClicks >= 100) {
-//         level = 5;
-//         count += BigInt(4);
-//         showClicksEarned(5);
-//     } else if (totalClicks >= 80) {
-//         level = 4;
-//         count += BigInt(3); 
-//         showClicksEarned(4); 
-//     } else if (totalClicks >= 40) {
-//         level = 3;
-//         count += BigInt(2); 
-//         showClicksEarned(3); 
-        
-//     } else if (totalClicks >= 20) {
-//         level = 2;
-//         count += BigInt(1); 
-//         showClicksEarned(2); 
-//     } else {
-//         level = 1;
-//         count += BigInt(0);
-//         showClicksEarned(1); 
-//     } 
-
-//     levelElement.textContent = level.toString();
-// }
-
-// function showClicksEarned(clicks) {
-//     var clicksEarnedContainer = document.getElementById('clicksEarnedContainer');
-//     clicksEarnedContainer.textContent = "+" + clicks;
-//     clicksEarnedContainer.classList.add('clickAnimation');
-//     setTimeout(function() {
-//         clicksEarnedContainer.classList.remove('clickAnimation'); 
-//         clicksEarnedContainer.textContent = "";
-//     }, 1000);
-// }
-
-// updateLevel();
-
-// button.addEventListener('click', function() {
-//     updateLevel();
-// });
-
+// Description: JavaScript file for the level up system.
+// The script contains the level up logic and helper functions.
+// The script listens to the click event and updates the level accordingly.
+// The script also contains the logic for the level up system and its functionalities.
+// The script uses BigInt to handle large numbers and localStorage to store the level.
 
 let levelElement = document.getElementById('currentLevel');
 let level = 1;
@@ -57,9 +12,8 @@ document.addEventListener('clickEvent', function(event) {
     projectProgression(level);
 });
 
-
+// Function to update the level of the player
 function updateLevel(totalClicks) {
-    // console.log("Nombre total de clics : ", totalClicks);
     if (totalClicks >= 140){
         level = 10;
         count += BigInt(9);
@@ -115,6 +69,7 @@ function updateLevel(totalClicks) {
     localStorage.setItem('level', level.toString());
 }
 
+// Function to show the progression of the player
 function showClicksEarned(clicks) {
     let clicksEarnedContainer = document.getElementById('clicksEarnedContainer');
     clicksEarnedContainer.textContent = "+" + clicks;

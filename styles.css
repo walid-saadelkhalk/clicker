@@ -1,3 +1,4 @@
+/* -------------------------- FONTS ------------------------------------------ */
 @font-face {
     font-family: 'Minecraft';
     src: url('assets/font/Minecraft.ttf') format('truetype');
@@ -8,8 +9,8 @@
     src: url('assets/font/Oswald.ttf') format('truetype');
 }
 
+/* -------------------------- GENERAL ------------------------------------------ */
 body {
-    /* background-image: url('assets/images/ps1_off.png'); */
     background-color: #2b2f33;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -40,7 +41,6 @@ body {
     right: 170px;
     width: 50vw;
     height: 88vh;
-    /* background-color: aqua; */
     background-color: rgba(19, 17, 17, 0.5); 
     backdrop-filter: blur(10px); 
     border-radius: 20px;
@@ -66,7 +66,6 @@ body {
     margin-left : 77px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     color :#e1c917;
     font-family: "Minecraft";
 }
@@ -153,7 +152,7 @@ body {
     display: block; 
 }
 
-
+/* -------------------------- CLICKER ------------------------------------------ */
 #clickerButton {
     position: absolute;
     left: 64.5vw;
@@ -185,13 +184,13 @@ body {
     font-size: 20px;
 }
 
+/* -------------------------- WORLD BANNER & HELPERS ------------------------------------------ */
 #worlds-banner {
     position: absolute;
     top : 6vh;
     left: 0;
     width: 32vw; 
     height: 87.5vh; 
-    /* background-color: #2b2f33;  */
     background-color: rgba(23, 22, 22, 0.5);  
     border : 2px solid #e4ca25;
     border-radius: 25px;
@@ -240,11 +239,6 @@ body {
 
 }
 
-/* #andy_world .background-image::before{
-    content:"";
-    width: 1400px;
-    visibility: hidden;
-} */
 
 #crash_world .background-image{
 
@@ -455,7 +449,7 @@ body {
 }
 
 
-
+/* -------------------------- Point added ------------------------------------------*/
 .level-display {
     font-size: 30px;
     font-weight: bold;
@@ -495,7 +489,7 @@ body {
     }
 }
 
-
+/*  -------------------------- PROGRESS BAR ------------------------------------------ */
 .progress {
     width: 85%;
     height: 20px;
@@ -557,11 +551,9 @@ body {
     #frame-spider {
     width: 57px;
     height: 215px;
-    /* border: 1px solid transparent; */
     background: url(assets/sprites/andy_sprite.png) no-repeat left bottom;
     animation: frame-animation 1s steps(21) infinite alternate;    
     overflow: hidden;
-    /* margin:3em auto; */
     }
 
     @keyframes frame-animation { 0% { background-position: 0px 0; } 100% { background-position: -1167px ; } }
@@ -635,6 +627,8 @@ body {
     @keyframes frame-animation2 { 0% { background-position: 0px 0; } 15% { background-position: 0px 0; } 100% { background-position: -855px ; } }
 
 
+
+/*  -------------------------- WORLD LEVELS ------------------------------------------ */
 #crash_world,
 #fireman_world,
 #kazuya_world,

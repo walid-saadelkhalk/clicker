@@ -1,20 +1,27 @@
+// Description: This file contains the helperTwo class and its methods.
+// The helperTwo class is a subclass of the Helper class and has its own specific methods.
+// The helperTwo class is used to create helper objects that increment the counter automatically.
+// The helperTwo class has a constructor method that takes in the name, price, and baseCapacity of the helper object.
+// The helperTwo class has a static method called updateCapacityForAllhelpers2 that updates the capacity of all helperTwo objects.
+
 let helperTwoCounter = 0;
 
+// HelperTwo class
 class HelperTwo extends Helper {
     constructor(name, price, baseCapacity) {
         super(BigInt(price), BigInt(baseCapacity))
         this.name = name + helperTwoCounter;
     }
     
+    // Function to add the helperTwo's capacity to the counter
     static updateCapacityForAllhelpers2(helpers2) {
         for (let i = 0; i < helpers2.length; i++) {
             if (helpers2[i].active) {
                 helpers2[i].capacity += helpers2[i].capacity * BigInt(2) / BigInt(100);
-                console.log("La capacité de l'helperTwo a été doublée :", helpers2[i].capacity);
             }
         }
     }
-
+    // Function to upgrade the helperTwo's capacity
     upgrade() {
         let activeHelperTwos = helpers2.filter(helper => helper instanceof HelperTwo && helper.active);
         
@@ -28,7 +35,6 @@ class HelperTwo extends Helper {
             for (let helper of activeHelperTwos) {
                 helper.baseCapacity = newBaseCapacity;
                 helper.capacity = newBaseCapacity;
-                console.log("Capacité de", helper.name, "après l'amélioration :", helper.capacity);
             }
     
         }
@@ -41,7 +47,8 @@ let helperButton2 = document.getElementById('helperButton2');
 let ameliorationButton2 = document.getElementById('ameliorationButton2');
 
 let helperTwoPrice = '30';
-        
+
+// HelperTwo button event listener
 helperButton2.addEventListener('click', function() {
     let priceHelper2Element = document.getElementById('priceHelper2');
     let priceHelper2 = BigInt(priceHelper2Element.textContent);
@@ -65,7 +72,7 @@ helperButton2.addEventListener('click', function() {
 
 var upgradeApplied = false;
 
-
+// Amelioration button event listener
 ameliorationButton1.addEventListener('click', function() {
     let priceImprovement = BigInt(ameliorationHelper2.textContent);
     if (count >= priceImprovement) {

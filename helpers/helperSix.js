@@ -1,9 +1,13 @@
+// Initiate helperSix variables
+// HelperSix button
+
 var helperButton6 = document.getElementById('helperButton6');
 var priceHelper6 = document.getElementById('priceHelper6');
 var helper6Active = false;
 var basePriceHelper6 = BigInt(priceHelper6.textContent); 
 var exponentHelper6 = 1;
 
+// HelperSix button event listener
 helperButton6.addEventListener('click', function() {
     if (count >= basePriceHelper6 && !helper6Active) {
         count -= basePriceHelper6;
