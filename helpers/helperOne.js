@@ -75,6 +75,7 @@ var upgradeApplied = false;
 
 // Amelioration button event listener
 ameliorationButton1.addEventListener('click', function() {
+    let ameliorationHelper1 = document.getElementById('ameliorationHelper1');
     let priceImprovement = BigInt(ameliorationHelper1.textContent);
     if (count >= priceImprovement) {
         count -= priceImprovement;
