@@ -45,7 +45,7 @@ let helpers4 = [];
 let helperButton4 = document.getElementById('helperButton4');
 let ameliorationButton4 = document.getElementById('ameliorationButton4');
 
-let HelperFourPrice = '40';
+let HelperFourPrice = '1000';
 
 // HelperFour button event listener 
 helperButton4.addEventListener('click', function() {

@@ -42,7 +42,7 @@ let helpers3 = [];
 let helperButton3 = document.getElementById('helperButton3');
 let ameliorationButton3 = document.getElementById('ameliorationButton3');
 
-let HelperThreePrice = '40';
+let HelperThreePrice = '500';
 
 // HelperThree button event listener        
 helperButton3.addEventListener('click', function() {
