@@ -5,7 +5,7 @@
 
 // Function to give the golden button a value
 function handleGoldButtonClick() {
-    count += BigInt(100000);
+    count += BigInt(100);
     counter.textContent = count.toString();
     localStorage.setItem('gamer', count.toString());
 }
@@ -22,8 +22,8 @@ function hideGoldButton() {
 goldButton.style.visibility = 'hidden';
 
 // Function to show the golden button every 5 seconds
-setTimeout(showGoldButton, 1 * 5 * 1000);
+setTimeout(showGoldButton, 5 * 60 * 1000);
 setInterval(function() {
     showGoldButton();
     setTimeout(hideGoldButton, 3000); 
-}, 1 * 5 * 1000);
+}, 5 * 60 * 1000);

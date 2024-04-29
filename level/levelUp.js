@@ -14,47 +14,47 @@ document.addEventListener('clickEvent', function(event) {
 
 // Function to update the level of the player
 function updateLevel(totalClicks) {
-    if (totalClicks >= 140){
+    if (totalClicks >= 1000000000) {
         level = 10;
         count += BigInt(9);
         showClicksEarned(10);
         document.getElementById('worlds-banner').classList.add('level-10');
-    } else if (totalClicks >= 130) {
+    } else if (totalClicks >= 1000000) {
         level = 9;
         count += BigInt(8);
         showClicksEarned(9);
         document.getElementById('worlds-banner').classList.add('level-9');
-    } else if (totalClicks >= 120) {
+    } else if (totalClicks >= 500000) {
         level = 8;
         count += BigInt(7);
         showClicksEarned(8);
         document.getElementById('worlds-banner').classList.add('level-8');
-    } else if (totalClicks >= 110) {
+    } else if (totalClicks >= 100000) {
         level = 7;
         count += BigInt(6);
         showClicksEarned(7);
         document.getElementById('worlds-banner').classList.add('level-7');
-    } else if (totalClicks >= 100) {
+    } else if (totalClicks >= 50000) {
         level = 6;
         count += BigInt(5);
         showClicksEarned(6);
         document.getElementById('worlds-banner').classList.add('level-6');
-    } else if (totalClicks >= 80) {
+    } else if (totalClicks >=10000) {
         level = 5;
         count += BigInt(4);
         showClicksEarned(5);
         document.getElementById('worlds-banner').classList.add('level-5');
-    } else if (totalClicks >= 60) {
+    } else if (totalClicks >= 5000) {
         level = 4;
         count += BigInt(3);
         showClicksEarned(4);
         document.getElementById('worlds-banner').classList.add('level-4');
-    } else if (totalClicks >= 40) {
+    } else if (totalClicks >= 1000) {
         level = 3;
         count += BigInt(2);
         showClicksEarned(3);
         document.getElementById('worlds-banner').classList.add('level-3');
-    } else if (totalClicks >= 20) {
+    } else if (totalClicks >= 100) {
         level = 2;
         count += BigInt(1);
         showClicksEarned(2);
